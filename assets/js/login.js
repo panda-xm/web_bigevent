@@ -4,8 +4,8 @@ $(function () {
         $('.reg-box').show();
     });
     $('#link_login').on('click', function () {
-        $('.reg-box').hide();
         $('.login-reg').show();
+        $('.reg-box').hide();
     });
 
     //从layui中获取 form对象
@@ -63,7 +63,7 @@ $(function () {
                 //将登录成功得到的 token 字符串 保存到localStorage中
                 localStorage.setItem('token', res.token);
                 //跳转到后台主页
-                // location.href = '/index.html';
+                location.href = '/index.html';
             }
 
         })
