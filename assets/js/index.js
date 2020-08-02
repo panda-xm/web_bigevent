@@ -30,12 +30,11 @@ function getUserInfo() {
 function renderAvatar(user) {
     let uname = user.nickname || user.username;
     $('.welcome').show().html("&nbsp;&nbsp;" + uname);
+    $('.youhua').show();
     if (user.user_pic !== null) {
-        $('.youhua').hide();
         $('.layui-nav-img').attr('src', user.user_pic);
         $('.text-avatar').hide();
     } else {
-        $('.youhua').show();
         $('.layui-nav-img').hide();
         $('.text-avatar').show().html(uname[0]);
     }
